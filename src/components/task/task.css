@@ -1,0 +1,13 @@
+#biggestBillsSection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.bills {
+  border: 0;
+  padding: 2px;
+  border-bottom: 1.5px solid black;
+}

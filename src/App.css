@@ -8,44 +8,61 @@ body {
   width: 100%;
 }
 
-div {
+#container {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 #root {
-  border: solid 1px red;
+  border: solid 2px black;
+  border-radius: 10px;
   width: 80%;
-  height: 40%;
+  height: 90%;
+  overflow: hidden;
 }
 
 #user-money,
 #current-balance {
   flex-direction: column;
-  justify-content: center;
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
 }
 
 #user-money {
-  border: solid 2px purple;
+  width: 100%;
 }
 #current-balance {
-  border: solid 2px blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745;
+  color: white;
 }
 
 #user-money input {
-  height: 10%;
-  width: 80%;
+  height: 2rem;
+  width: 10rem;
   font-size: 22px;
+  /* margin: 0 0; */
 }
 
-#current-balance p {
+#current-balance h2 {
   font-size: 80px;
   font-weight: 100;
+  margin: 0;
 }
 
 #current-balance span {
   font-size: 25px;
   font-weight: 700;
+}
+
+select,
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
