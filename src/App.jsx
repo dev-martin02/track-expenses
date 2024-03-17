@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Task from "./components/task/Task";
+import InputLog from "./components/inputLog/InputLog";
+import UserBalance from "./components/userBalance/UserBalance";
 
 function App() {
   const [balance, setBalance] = useState(0);
@@ -46,20 +48,15 @@ function App() {
   return (
     <div id="container">
       <div id="user-money">
-        <select name="activity" id="activity" onChange={getSelectValue}>
-          <option value="expense">Expense</option>
-          <option value="income">Income</option>
-        </select>
-        <input type="number" value={inputAmount} onChange={getValueInput} />
-        <button onClick={action}>Add</button>
-        <div>
-          <Task />
-        </div>
+        <InputLog
+          getValueInput={getValueInput}
+          getSelectValue={getSelectValue}
+          inputAmount={inputAmount}
+          action={action}
+        />
+        <Task />
       </div>
-      <div id="current-balance">
-        <h2>{`$${balance}`}</h2>
-        <span>Current Balance</span>
-      </div>
+      <UserBalance balance={balance} />
     </div>
   );
 }

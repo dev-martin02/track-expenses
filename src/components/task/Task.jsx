@@ -6,9 +6,10 @@ export default function Task() {
   const [focus2, setFocus2] = useState();
   const [focus3, setFocus3] = useState();
 
-  const initialText = "My biggest bill are...";
+  const initialText = "My biggest bills are...";
   return (
     <div id="biggestBillsSection">
+      <h2>Biggest Bills</h2>
       <input
         value={focus1}
         onChange={(e) => setFocus1(e.target.value)}
