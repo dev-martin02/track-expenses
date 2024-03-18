@@ -4,6 +4,8 @@ export default function InputLog({
   inputAmount,
   action,
 }) {
+  // TODO: Expenses & Income should have a different background color
+
   return (
     <div>
       <select name="activity" id="activity" onChange={getSelectValue}>

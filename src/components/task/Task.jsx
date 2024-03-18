@@ -7,6 +7,9 @@ export default function Task() {
   const [focus3, setFocus3] = useState();
 
   const initialText = "My biggest bills are...";
+
+  // TODO: Line should be just a little longer than the word (input)
+
   return (
     <div id="biggestBillsSection">
       <h2>Biggest Bills</h2>
