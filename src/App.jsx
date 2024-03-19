@@ -8,12 +8,16 @@ function App() {
   const [balance, setBalance] = useState(0);
   const [inputAmount, setInputAmount] = useState("");
   const [userAction, setUserAction] = useState("expense");
+  const [prevBalance, setPrevBalance] = useState("");
 
+  // Todo: expenses should be an object, with 2 properties, categories and cost
   // Set values
   const getValueInput = (e) => {
-    let value = parseInt(e.target.value);
+    let value = Number(e.target.value);
     setInputAmount(value);
+    setPrevBalance(value);
   };
+  console.log(inputAmount);
   const getSelectValue = (e) => {
     setUserAction(e.target.value);
   };
@@ -41,7 +45,7 @@ function App() {
         break;
 
       default:
-        console.log("Sorry you have to select one");
+        alert("Sorry you have to select one");
     }
   };
 
@@ -51,12 +55,13 @@ function App() {
         <InputLog
           getValueInput={getValueInput}
           getSelectValue={getSelectValue}
+          userAction={userAction}
           inputAmount={inputAmount}
           action={action}
         />
         <Task />
       </div>
-      <UserBalance balance={balance} />
+      <UserBalance balance={balance} inputAmount={prevBalance} />
     </div>
   );
 }

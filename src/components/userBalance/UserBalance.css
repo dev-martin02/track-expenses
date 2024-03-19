@@ -1,0 +1,18 @@
+#current-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745;
+  color: white;
+}
+
+#current-balance h2 {
+  font-size: 80px;
+  font-weight: 100;
+  margin: 0;
+}
+
+#current-balance span {
+  font-size: 25px;
+  font-weight: 700;
+}

@@ -34,33 +34,3 @@ body {
   display: flex;
   justify-content: space-around;
 }
-#current-balance {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #28a745;
-  color: white;
-}
-
-#current-balance h2 {
-  font-size: 80px;
-  font-weight: 100;
-  margin: 0;
-}
-
-#current-balance span {
-  font-size: 25px;
-  font-weight: 700;
-}
-
-select {
-  display: block;
-}
-select,
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-}

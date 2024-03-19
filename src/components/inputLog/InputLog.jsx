@@ -1,14 +1,19 @@
+import "./InputLog.css";
+
 export default function InputLog({
+  userAction,
   getSelectValue,
   getValueInput,
   inputAmount,
   action,
 }) {
-  // TODO: Expenses & Income should have a different background color
-
   return (
     <div>
-      <select name="activity" id="activity" onChange={getSelectValue}>
+      <select
+        name="activity"
+        onChange={getSelectValue}
+        id={userAction === "expense" ? "expense" : "income"}
+      >
         <option value="expense">Expense</option>
         <option value="income">Income</option>
       </select>
