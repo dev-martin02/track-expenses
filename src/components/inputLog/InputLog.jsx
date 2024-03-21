@@ -7,6 +7,13 @@ export default function InputLog({
   inputAmount,
   action,
 }) {
+  console.log(userAction);
+  function displayCatergory() {
+    if (userAction === "expense") {
+      return true;
+    }
+    return false;
+  }
   return (
     <div>
       <select
@@ -17,6 +24,12 @@ export default function InputLog({
         <option value="expense">Expense</option>
         <option value="income">Income</option>
       </select>
+      {displayCatergory() && (
+        <select name="catergories" id="categories">
+          <option value="food">Food</option>
+          <option value="bill">Bills</option>
+        </select>
+      )}
       <input type="number" value={inputAmount} onChange={getValueInput} />
       <button onClick={action}>Add</button>
     </div>
