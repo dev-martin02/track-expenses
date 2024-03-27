@@ -24,6 +24,7 @@ export default function InputLog({
         <option value="expense">Expense</option>
         <option value="income">Income</option>
       </select>
+
       {displayCatergory() && (
         <select name="catergories" id="categories">
           <option value="food">Food</option>
